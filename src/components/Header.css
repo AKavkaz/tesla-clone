@@ -48,11 +48,11 @@
 }
 
 .header__menu > .MuiSvgIcon-root {
-    position: relative;
-    z-index: 2;
-    cursor: pointer;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
 }
 
 .header__link--hidden {
-    visibility: hidden;
+  visibility: hidden;
 }

@@ -13,8 +13,8 @@ export class HeaderBlock extends Component {
             </h4>
           </div>
           <div className="headerBlock__actions">
-            <button className="headerBlock__buttonPrimary">custom order</button>
-            <button className="headerBlock__buttonSecondary">existing inventory</button>
+            <button className="headerBlock__button--primary">custom order</button>
+            <button className="headerBlock__button--secondary">existing inventory</button>
           </div>
         </div>
       </div>
