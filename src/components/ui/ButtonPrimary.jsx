@@ -1,12 +1,12 @@
-import React from 'react'
-import './ButtonPrimary.css'
+import React from "react";
+import "./ButtonPrimary.css";
 
-function ButtonPrimary({name, type, onClick}) {
+function ButtonPrimary({ name, type, onClick }) {
   return (
-    <div className="buttonPrimary" onClick={onClick} type={type}> 
-        {name}
-    </div>
-  )
+    <button className="buttonPrimary" onClick={onClick} type={type}>
+      {name}
+    </button>
+  );
 }
 
-export default ButtonPrimary
+export default ButtonPrimary;
