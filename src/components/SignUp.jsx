@@ -7,7 +7,7 @@ import "./Login.css";
 import { LanguageOutlined } from "@mui/icons-material";
 import ButtonPrimary from "./ui/ButtonPrimary";
 import ButtonSecondary from "./ui/ButtonSecondary";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, getAuth, updateProfile } from "firebase/auth";
 import { auth } from "../firebase";
 import { login } from "../features/userSlice";
 
@@ -18,6 +18,7 @@ function SignUp() {
   const [lName, setLName] = useState("");
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const authUser = getAuth(); 
 
   const SignUpUser = (e) => {
     e.preventDefault();
@@ -30,10 +31,9 @@ function SignUp() {
     }
 
     createUserWithEmailAndPassword(auth, email, password).then((userAuth) => {
-      userAuth.user
-        .updateProfile({
-          displayName: fName,
-        })
+      updateProfile(authUser.currentUser, {
+        displayName: fName,
+      })
         .then(() => {
           dispatch(
             login({
